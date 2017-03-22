@@ -10,63 +10,68 @@
   </head>
   <body>
     <div class="container">
-      <h1>What are your favorites?</h1>
-      <form id="survey">
-        <!---Name--->
-        <div class="form-group">
-          <label for="name">Enter your name.</label>
-          <input id="name" class="form-control" type="text">
-        </div>
-        <hr />
-        <!---Birthday--->
+      <div class="col-sm-2"></div>
+        <h1>What are your favorites?</h1>
+        <div class="col-sm-8">
+        <form id="survey">
+          <!---Name--->
           <div class="form-group">
-            <label for="birthdate">When is your birthdate</label>
-            <input type="date" id="birthdate" class="form-control">
+            <label for="name">Enter your name.</label>
+            <input id="name" class="form-control" type="text" required="true">
           </div>
           <hr />
-        <!---Beer--->
-        <div class="form-group">
-          <label for="beer">What's your favorite beer?</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="beer" value="Porter"checked>Porter
-            </label>
+          <!---Birthday--->
+            <div class="form-group">
+              <label for="birthdate">When is your birthdate</label>
+              <input type="date" id="birthdate" class="form-control" required="true">
+            </div>
+            <hr />
+          <!---Beer--->
+          <div class="form-group">
+            <label for="beer" required="true">What's your favorite beer?</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="beer" value="Porter">Porter
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="beer" value="Stout" required="true">Stout
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input required="true" type="radio" name="beer" value="Dunkelweizen">Dunkelweizen
+              </label>
+            </div>
           </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="beer" value="Stout">Stout
-            </label>
+          <hr />
+
+          <!---Cuisine--->
+          <div class="form-group">
+            <label for="cuisine">What's your favorite cuisine?</label>
+            <select required="true" class="form-control" id="cuisine">
+              <option></option>
+              <option value="Thai">Thai</option>
+              <option value="Indian">Indian</option>
+              <option value="Mediterranean">Mediterranean</option>
+            </select>
           </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="beer" value="Dunkelweizen">Dunkelweizen
-            </label>
+          <hr />
+
+          <!-- Color  -->
+          <div class="form-group">
+            <label for="color">What's your favorite color?</label>
+            <input required="true" id="color" class="form-control" type="color">
           </div>
+
+          <button class="btn btn-success" type="submit">Submit</button>
+          <button class="btn btn-danger" type="button" id="reset-form" value="reset">Reset</button>
+
+        </form>
+        <div id="feedback">
         </div>
-        <hr />
-
-        <!---Cuisine--->
-        <div class="form-group">
-          <label for="cuisine">What's your favorite cuisine?</label>
-          <select class="form-control" id="cuisine">
-            <option value="Thai">Thai</option>
-            <option value="Indian">Indian</option>
-            <option value="Mediterranean">Mediterranean</option>
-          </select>
-        </div>
-        <hr />
-
-        <!-- Color  -->
-        <div class="form-group">
-          <label for="color">What's your favorite color?</label>
-          <input id="color" class="form-control" type="color">
-        </div>
-
-        <button class="btn btn-success" type="submit">Submit</button>
-
-      </form>
-      <div id="feedback">
-
+        <div class="col-sm-2"></div>
       </div>
     </div><!---Container close--->
   </body>

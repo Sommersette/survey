@@ -9,7 +9,11 @@ $(function(){
 
     $("#feedback").text("Thank you " + nameInput + " for your feedback!" );
     $("#feedback").append(" We've recorded your birthdate as "+ birthdate+ ", your favorite beer as " + beer + ", your favorite cuisine as " + cuisine + " and your favorite hex color as " + color + ".");
-
   });
 
+  $("#reset-form").on("click", function(){
+    $("form#survey").trigger("reset");
+
+    $("#feedback").detach();
+  });
 });
